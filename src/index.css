@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "Fira Code", ui-monospace, monospace;
+  --font-body: "Fira Sans", system-ui, sans-serif;
+
+  --color-ink: #0a0f1e;
+  --color-ink-2: #0f172a;
+  --color-ink-3: #16213b;
+  --color-line: rgba(148, 163, 184, 0.16);
+  --color-fog: #94a3b8;
+  --color-snow: #f8fafc;
+  --color-live: #22c55e;
+  --color-live-2: #4ade80;
+  --color-cyan: #22d3ee;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-snow);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(34, 197, 94, 0.35);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-live);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,8 @@
+export { Matrix } from './matrix'
+export { Dense, ReLU, Tanh, Sigmoid, makeActivation } from './layer'
+export type { Layer, Param, Activation } from './layer'
+export { softmax, softmaxCrossEntropy, accuracy } from './losses'
+export { SGD, Adam } from './optimizer'
+export type { Optimizer } from './optimizer'
+export { Network } from './network'
+export type { SerializedNet } from './network'
