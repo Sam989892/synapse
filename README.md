@@ -23,7 +23,8 @@ The maths depends on nothing but `Math`. This is what a deep-learning framework 
 
 ## Verified
 
-- `npx tsx scripts/sanity.ts` — trains spiral / XOR / circles / moons / gaussian to **99–100%** accuracy, proving backprop is correct.
+- `npm test` — **11 deterministic unit tests** (weights fixed, nothing random), including a **gradient check**: the gradient from backpropagation is compared against a numerical gradient from finite differences and must agree to within `1e-4`. This is the standard proof that an autodiff implementation is correct — if a chain-rule term or a transpose were wrong, the two disagree. Also covers matmul, softmax (distribution + shift-invariance), and cross-entropy.
+- `npx tsx scripts/sanity.ts` — trains spiral / XOR / circles / moons / gaussian to **99–100%** accuracy (the convergence proof; stochastic, so it's a script not a CI gate).
 - `npx tsx scripts/train-digits.ts` — trains the 784→64→32→10 digit model on MNIST to **94.25%** held-out test accuracy and exports the weights.
 
 ## Run it
@@ -31,6 +32,7 @@ The maths depends on nothing but `Math`. This is what a deep-learning framework 
 ```bash
 npm install
 npm run dev        # http://localhost:5176
+npm test           # 11 tests incl. the backprop gradient check
 npm run build
 
 # reproduce the proofs
