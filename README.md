@@ -1,5 +1,7 @@
 # Synapse — a neural network from scratch
 
+[![CI](https://github.com/Sam989892/synapse/actions/workflows/ci.yml/badge.svg)](https://github.com/Sam989892/synapse/actions/workflows/ci.yml)
+
 A working neural network built from first principles in TypeScript. **No TensorFlow, no PyTorch, no NumPy, no API** — every matrix multiply, activation, loss gradient and the entire backpropagation pass is hand-written. It runs 100% in the browser.
 
 Two things prove the engine is real:
