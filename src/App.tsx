@@ -89,7 +89,7 @@ export default function App() {
           <div className="flex items-center rounded-xl border border-live/30 bg-live/[0.06] p-4">
             <p className="text-[14px] leading-relaxed text-snow">
               Verified: trains spiral / XOR / circles / moons to <span className="text-live">99–100%</span>,
-              and MNIST digits to <span className="text-live">94%</span> test accuracy.
+              and MNIST digits to <span className="text-live">97.6%</span> test accuracy.
             </p>
           </div>
         </div>
